@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url("lightmouse.png"), auto;
+}
+
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgb(123, 94, 57);
+  text-decoration: none;
+  border-style: none none;
+  background-color: bisque;
+}
+
+/* title bar*/
+/*title*/
+h1 a {
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  top: 4%;
+}
+
+h1 a:hover {
+  color: rgb(155, 86, 63);
+}
+
+/*dropdown tab*/
+#side-nav {
+  position: fixed;
+  z-index: 999;
+  left: 0%;
+  top: 3%;
+  transform: translateX(50%);
+}
+
+#dropdown {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  background-color: rgb(253, 240, 223);
+  justify-content: center;
+  z-index: 998;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 20px 20px;
+  background-color: rgb(253, 240, 223);
+  align-items: center;
+}
+
+.nav-links li {
+  padding: 20px 20px;
+  font-size: 40px;
+  background-color: rgb(253, 240, 223);
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+  background-color: rgb(253, 240, 223);
+}
+
+.nav-links li a:hover {
+  color: rgb(155, 86, 63) !important;
+}
+
+.cta {
+  padding: 10px 25px;
+  background-color: rgb(202, 158, 130);
+  border-color: rgb(224, 191, 171);
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 0.2cm;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: fixed;
+  left: 80%;
+  top: 5%;
+  transform: translateX(50%);
+}
+
+/*exit cross*/
+@keyframes slide {
+  0% {
+    transform: translateX(-10cm);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0cm);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotate(1440deg);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes b-slide {
+  0% {
+    transform: translateX(0cm);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(-10cm);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes b-rotation {
+  from {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  to {
+    transform: rotate(1440deg);
+    animation-timing-function: ease-out;
+  }
+}
+#leave {
+  display: none;
+}
+
+.adder {
+  position: fixed;
+  left: 70%;
+  top: 40%;
+  transform: translateX(0%);
+  width: 187px;
+  height: 187px;
+  animation: slide 1.5s;
+}
+
+.exit {
+  width: 100%;
+}
+
+#cross {
+  width: 187px;
+  height: 187px;
+  animation: rotation 1.5s linear;
+}
+
+.cross-animated {
+  animation: b-slide 1.5s linear;
+}
+
+.cross-animated-2 {
+  animation: b-rotation 1.5s linear;
+}
+
+/* body and centre image */
+body {
+  background-color: bisque;
+  margin: 0;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#josh {
+  width: 30%;
+  height: auto;
+}
+
+/*gears*/
+@keyframes rotater {
+  from {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: rotate(360deg);
+    animation-timing-function: linear;
+  }
+}
+@keyframes b-rotater {
+  from {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: rotate(-360deg);
+    animation-timing-function: linear;
+  }
+}
+@keyframes speed-rotater {
+  from {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in-out;
+  }
+  to {
+    transform: rotate(360deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+.gear {
+  position: fixed;
+  left: 81%;
+  top: 18%;
+  transform: translateX(0%);
+  animation: rotater 40s infinite linear;
+  width: 7%;
+  height: auto;
+}
+
+.gear-2 {
+  position: fixed;
+  left: 76%;
+  top: 30%;
+  transform: translateX(0%);
+  animation: rotater 30s infinite linear;
+  width: 4%;
+  height: auto;
+}
+
+.gear-3 {
+  position: fixed;
+  left: -25%;
+  top: 57%;
+  transform: translateX(0%);
+  animation: rotater 120s infinite linear;
+  width: 50%;
+  height: auto;
+}
+
+.gear-4 {
+  position: fixed;
+  left: 18%;
+  top: 80%;
+  transform: translateX(0%);
+  animation: b-rotater 85s infinite linear;
+  width: 25%;
+  height: auto;
+}
+
+.gear-5 {
+  position: fixed;
+  left: -13%;
+  top: 27%;
+  transform: translateX(0%);
+  animation: b-rotater 70s infinite linear;
+  width: 25%;
+  height: auto;
+}
+
+.gear-6 {
+  position: fixed;
+  left: 75%;
+  top: 19%;
+  transform: translateX(0%);
+  animation: b-rotater 70s infinite linear;
+  width: 7%;
+  height: auto;
+  z-index: -100;
+}
+
+.gear-7 {
+  position: fixed;
+  left: -8%;
+  top: 13%;
+  transform: translateX(0%);
+  animation: b-rotater 70s infinite linear;
+  width: 15%;
+  height: auto;
+  z-index: -100;
+}
+
+.gear-8 {
+  position: fixed;
+  left: 30%;
+  top: 83%;
+  transform: translateX(0%);
+  animation: rotater 70s infinite linear;
+  width: 20%;
+  height: auto;
+  z-index: -100;
+}
+
+.gear-9 {
+  position: fixed;
+  left: -9%;
+  top: 43%;
+  transform: translateX(0%);
+  animation: rotater 70s infinite linear;
+  width: 25%;
+  height: auto;
+  z-index: -100;
+}
+
+.gear-10 {
+  position: fixed;
+  left: 8%;
+  top: 66%;
+  transform: translateX(0%);
+  animation: rotater 70s infinite linear;
+  width: 25%;
+  height: auto;
+  z-index: -100;
+}
+
+/*coloured gears*/
+.gearcolour {
+  position: fixed;
+  display: none;
+  left: -25%;
+  top: 57%;
+  transform: translateX(0%);
+  animation: rotater 120s infinite linear;
+  width: 50%;
+  height: auto;
+}
+
+.gearcolour-2 {
+  display: none;
+  position: fixed;
+  left: 18%;
+  top: 80%;
+  transform: translateX(0%);
+  animation: b-rotater 85s infinite linear;
+  width: 25%;
+  height: auto;
+}
+
+.gearcolour-3 {
+  display: none;
+  position: fixed;
+  left: -13%;
+  top: 27%;
+  transform: translateX(0%);
+  animation: b-rotater 70s infinite linear;
+  width: 25%;
+  height: auto;
+}
+
+/*pipes*/
+.pipes {
+  height: auto;
+  max-width: 100%;
+  z-index: -50;
+  position: fixed;
+  transform: translatez(50%);
+  left: 0%;
+}
+
+.speed {
+  animation: speed-rotater 1.5s;
+}
+
+/*wrapper*/
+.wrapper {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <script src="{{ url_for('static', filename='contact.js') }}"></script>
+</head>
+
+<body>
+
+    <a id="ctaButton" class="cta" href="#">Home</a>
+
+    <div class="browngears">
+
+            <img class="gear" src="{{ url_for('static', filename='images/Gear big.png') }}" alt="gear">
+        
+            <img class="gear-2" src="{{ url_for('static', filename='images/Gear big.png') }}" alt="gear">
+        
+            <img class="gear-3" src="{{ url_for('static', filename='images/Gear big.png') }}" alt="gear">
+          
+            <img class="gear-4" src="{{ url_for('static', filename='images/Gear big.png') }}" alt="gear">
+          
+            <img class="gear-5" src="{{ url_for('static', filename='images/Gear big.png') }}" alt="gear">
+        
+            <img class="gear-6" src="{{ url_for('static', filename='images/Gearcolor2.png') }}" alt="gear">
+        
+            <img class="gear-7" src="{{ url_for('static', filename='images/Gearcolor2.png') }}"  alt="gear">
+        
+            <img class="gear-8" src="{{ url_for('static', filename='images/Gearcolor2.png') }}"  alt="gear">
+          
+            <img class="gear-9" src="{{ url_for('static', filename='images/Gearcolor2.png') }}"  alt="gear">
+        
+            <img class="gear-10" src="{{ url_for('static', filename='images/Gearcolor2.png') }}"  alt="gear">
+    </div>
+
+    <div>
+        <img class="pipes" src="{{ url_for('static', filename='images/pipes.png') }}"  alt="gear">
+    </div>
+    
+
+    <h1>Contact Us</h1>
+    <form method="POST" class="contact__form" action="#">
+        {{form.hidden_tag()}}
+        {{form.name.label()}}
+        {{form.name()}}
+        {{form.email.label()}}
+        {{form.email()}}
+        {{form.message.label()}}
+        {{form.message}}
+        {{form.submit()}}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages%}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </form>
+</body>
+</html>
